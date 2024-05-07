@@ -1,5 +1,6 @@
 package com.example.parcial1
 
+import MainPage
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -22,13 +23,14 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    Greeting("Android")
+                    MainPage()
                 }
             }
         }
     }
 }
 
+/*
 @Composable
 fun Greeting(name: String, modifier: Modifier = Modifier) {
     Text(
@@ -43,4 +45,4 @@ fun GreetingPreview() {
     Parcial1Theme {
         Greeting("Android")
     }
-}
+}*/
