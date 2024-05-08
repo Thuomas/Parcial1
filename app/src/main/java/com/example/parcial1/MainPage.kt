@@ -33,7 +33,7 @@ fun MainPage(modifier: Modifier = Modifier) {
     var contraseña by remember {
         mutableStateOf("")
     }
-    val navControler = rememberNavController()
+    val navController = rememberNavController()
 
     Column(
         modifier = Modifier.fillMaxSize(),
@@ -69,7 +69,7 @@ fun MainPage(modifier: Modifier = Modifier) {
         Button(
             onClick = {
                 if (email == "pedro@pe.com.ar" && contraseña == "abc123") {
-                    navControler.navigate("Bienvenida/$email")
+                    navController.navigate("Bienvenida/$email")
                 } else {
                     //Mostrar mensaje de error
                 }
@@ -81,15 +81,7 @@ fun MainPage(modifier: Modifier = Modifier) {
         }
     }
 
-        NavHost(
-            navController = navControler,
-            modifier = Modifier,
-            startDestination = "MainPage"
-        ) {
-            composable("Bienvenida") {
-                Bienvenida(navControler = navControler)
-            }
-        }
+
 
 }
 

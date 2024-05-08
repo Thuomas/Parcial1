@@ -19,7 +19,8 @@ import com.example.parcial1.ui.theme.Parcial1Theme
 fun Bienvenida(modifier: Modifier = Modifier) {
     val navControler = rememberNavController()
     val currentBackStackEntry = navControler.currentBackStackEntry
-    
+    val email = currentBackStackEntry?.arguments?.getString("email")
+
     Column(
         modifier = Modifier.fillMaxSize(),
         verticalArrangement = Arrangement.Center,
@@ -32,7 +33,7 @@ fun Bienvenida(modifier: Modifier = Modifier) {
         )
         Spacer(modifier = Modifier.height(16.dp))
         Text(
-            text = "Poner Email Usuario",
+            text = "$email",
             style = MaterialTheme.typography.titleSmall,
             textAlign = TextAlign.Center
         )
